@@ -22,7 +22,7 @@ class Livro:
     categoria: str
     disponivel: bool = True
 
-    def __str__(self) -> str:  # Polimorfismo através da sobrescrita do método __str__
+    def __str__(self) -> str:  # Polimorfismo através da sobrescrita em __str__
         """Representação textual do livro."""
         status = "Disponível" if self.disponivel else "Emprestado"
         return (
@@ -63,7 +63,7 @@ class Emprestimo:
     data_prevista_devolucao: datetime
     data_devolucao: Optional[datetime] = None
 
-    # Método que encapsula a lógica de negócio (outro exemplo de encapsulamento)
+    # Encapsula a lógica de negócio (outro exemplo de encapsulamento)
     def esta_atrasado(self) -> bool:
         """Verifica se o empréstimo está atrasado."""
         if self.data_devolucao:
